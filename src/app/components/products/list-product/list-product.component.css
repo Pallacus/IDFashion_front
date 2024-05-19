@@ -1,0 +1,84 @@
+.col-12 {
+  margin: 1.875rem 0 0.625rem 0;
+}
+
+h2,
+h4 {
+  text-align: center;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  width: calc(25% - 10px);
+}
+
+@media screen and (max-width: 900px) {
+  .cards-wrapper .card {
+    width: calc(33.333% - 10px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cards-wrapper .card {
+    width: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cards-wrapper .card {
+    width: 100%;
+  }
+}
+
+.category {
+  gap: 10px;
+}
+
+.catbutton {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: white;
+  background-color: #778da9;
+
+  &:hover {
+    color: white;
+    background-color: #1b263b;
+  }
+}
+
+.arrowStyle {
+  margin: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.custom-gutter {
+  --bs-gutter-x: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.card {
+  border: none;
+}
+
+.fres {
+  width: 100%;
+  height: 50px;
+}
+

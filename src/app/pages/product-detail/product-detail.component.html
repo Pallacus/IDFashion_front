@@ -1,0 +1,96 @@
+<div class="container">
+
+    <section class="row pt-4">
+
+        <figure style="background-image: url({{product?.image}});" class="miFoto col-12 col-md-6">
+
+        </figure>
+
+        <article class="col-12 col-md-5 offset-md-1 bl">
+            <h1>{{product?.title}}</h1>
+
+            <h5 class="mt-4">{{product?.price}} &euro;</h5>
+            <p class="mt-4 description">{{product?.description}}</p>
+
+            <p><span>Category:</span>{{category?.title}}</p>
+
+            <button type="button" class="btn miBtn mt-4 text-aling-center" (click)="onClickFavorite()"><i
+                    class="fa-regular fa-heart" [class.favoriteHeart]="isFavorite"></i></button>
+
+            <button type="button" class="btn mt-4" (click)="onBuy()">Buy Now!</button>
+
+
+        </article>
+
+        <article class="mt-3 reviews">
+
+
+            <h4 class="subtitle mb-2 mt-3">What do the rest of the users say?</h4>
+
+            <div id="commentsCarousel" class="hero carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="carousel-content">
+                            <div class="carousel-text">
+                                <h5 class="mt-4 mb-3">Hello, this is what the rest of the customers think.</h5>
+                                <p>These are the opinions of the rest of the users. The participation of other users
+                                    like you is of great importance to us.
+                                    Please, if you purchase the item, participate in this comment box to share your user
+                                    experience with all of us. Thank
+                                    you very much for your time, and we hope to meet your expectations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    @for (comment of arrComments; track comment.id) {
+                    <div class="carousel-item">
+
+                        <div class="carousel-content">
+                            <div class="carousel-text">
+                                <h5 class="mt-4 mb-3">{{comment?.author}} {{comment?.author_last_name}}</h5>
+                                <p>{{comment?.text}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    }
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplaying"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next" aria-hidden="true"></span>
+                    <span class="visually-hidden"></span>
+                </button>
+            </div>
+
+        </article>
+
+        <article>
+
+            <form [formGroup]="formularioComment" (ngSubmit)="onSubmit()">
+
+                <h5 class="mt-3 mb-3">Your opinion is also important to everyone</h5>
+                <textarea class="form-control" placeholder="Please write your comment here."
+                    formControlName="text"></textarea>
+
+                <input type="Submit" value="Send" class="btn mt-2" [disabled]="!formularioComment.valid">
+
+            </form>
+
+        </article>
+
+
+
+
+
+    </section>
+
+
+
+
+
+</div>

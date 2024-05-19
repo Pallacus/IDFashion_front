@@ -1,0 +1,64 @@
+.box {
+    height: 30vh;
+    text-align: center;
+    border-radius: 25px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.box1{
+    background-image: url(https://img.sharemyimage.com/2024/04/23/sweet-lady-striped-dress-with-gray-smartphone.md.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0,0,0,0.3);
+}
+.box2{
+    background-image: url(https://img.sharemyimage.com/2024/04/23/pexels-bohlemedia-1884581.md.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0,0,0,0.3);
+}
+.box3{
+    background-image: url(https://img.sharemyimage.com/2024/04/23/vecteezy_asian-shopper-woman-in-back-view_6654497-2.md.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0,0,0,0.3);
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.father{
+    height: 40vh;
+}
+
+div>a {
+    text-decoration: none;
+    color: #E0E1DD; 
+    display: block;
+}
+
+.box:hover {
+    box-shadow: 1px 1px 10px black;
+}
+
+/* Mediaquery mobile */
+
+@media only screen and (max-width: 800px) {
+
+    .row {
+        flex-direction: column;
+    }
+
+    .box {
+        height: 10vh;
+        margin: 0.425rem 0;
+    }
+
+}

@@ -1,0 +1,24 @@
+
+
+article {
+    height: 400px;
+    background-image: url(https://img.sharemyimage.com/2024/04/23/footerSpacerV3.jpeg);
+    background-position: top, 500px;
+    background-size: cover;
+    position: relative;
+    background-color: var(--lightColor);
+    background-blend-mode: multiply;
+    font-size: 0.5rem;
+
+
+    & div {
+        font-family: 'Roboto';
+        font-style: italic;
+        color: var(--lightColor);
+        text-shadow: 4px 4px 8px var(--darkBlue);
+        margin-bottom: 15px;
+        margin-left: 15px;
+        
+
+    }
+}

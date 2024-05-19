@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand fs-4" [routerLink]="['']">ID Fashion</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a class="nav-link" [routerLink]="['/categories']">Categories</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                    <a class="nav-link" [routerLink]="['/offers']">Offers</a>
+                </li>
+
+            </ul>
+
+            <hr>
+
+            <ul class="navbar-nav ms-auto">
+
+                <!-- CHECKS if User is Admin -->
+                @if (usuariosService.isAdmin()) {
+                <div class="admin-container">
+                    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link" [routerLink]="['/dashboard']">
+                            <i class="fa-solid fa-chart-line d-none d-md-inline mx-2"></i>
+                            <span class="login-text">Dashboard</span>
+                        </a>
+                    </li>
+                </div>
+                }
+
+                <!-- CHECKS if User is NOT Logged -->
+                @if (!usuariosService.isLogged()) {
+                <div class="login-container">
+                    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link" [routerLink]="['/login']">
+                            <i class="fas fa-sign-in-alt d-none d-md-inline mx-2"></i>
+                            <span class="login-text">Login</span>
+                        </a>
+                    </li>
+                </div>
+                }
+
+                <!-- CHECKS if User is NOT Logged -->
+                @if (!usuariosService.isLogged()){
+                <div class="register-container">
+                    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link" [routerLink]="['/register']">
+                            <i class="fas fa-user mx-2  d-none d-md-inline mx-2"></i>
+                            <span class="register-text">Sign up</span>
+                        </a>
+                    </li>
+                </div>
+                }
+
+                <!-- OnClick LOGOUT -->
+                @if (usuariosService.isLogged()) {
+                <div class="logout-container">
+                    <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link logout" (click)="onClickLogout()">
+
+                            <i class="fa-solid fa-right-from-bracket mx-2  d-none d-md-inline mx-2"></i>
+                            <span class="register-text">Logout</span>
+                        </a>
+                    </li>
+                </div>
+                }
+
+                <div class="cart-container" id="cart">
+                    <li class="nav-item position-relative" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link" [routerLink]="['/shoppingcart']">
+                            <i class="fas fa-shopping-cart mx-5 p-3  rounded-circle cart-icon"></i>
+                        </a>
+                            @if (ordersService.getTotalItems() > 0) {
+                                <h5 class="position-absolute text-center">{{ ordersService.getTotalItems() }} </h5>
+                            }
+
+                    </li>
+
+                </div>
+
+            </ul>
+        </div>
+    </div>
+</nav>

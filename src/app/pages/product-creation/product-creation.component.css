@@ -1,0 +1,61 @@
+h1 {
+    font-family: 'Roboto';
+}
+
+.miForm {
+
+    font-family: 'Roboto';
+    background-color: #e9eae7;
+    margin: 0px 0px 50px 0px;
+    padding: 30px;
+    border-radius: 10px;
+
+    & div {
+        & label {
+            font-weight: bold;
+        }
+
+        & input {
+            max-width: 700px;
+            border: 1px solid  #b5b2b2;
+            border-radius: 0.125rem;
+            font-weight: 300;
+            
+        }
+
+        & textarea {
+            resize: vertical;
+            max-height: 90px;
+            max-width: 700px;
+            border: 1px solid #b5b2b2;
+            border-radius: 0.125rem;
+            font-weight: 300;
+        }
+    }
+}
+
+.btn {
+    color: rgba(224, 225, 221);
+    font-family: 'Roboto';
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    background: #0D1B2A;
+
+}
+
+.body {
+    background-image: url('https://img.sharemyimage.com/2024/04/23/clothes-store-with-rack-clothes.webp ');
+    background-size: cover;
+
+
+}
+
+select {
+    max-width: 43.75rem;
+    border: none;
+    border-radius: 0.125rem;
+    font-weight: 300;
+    box-shadow: 0rem 0rem 0.3125rem rgba(0, 0, 0, 0.5);
+}

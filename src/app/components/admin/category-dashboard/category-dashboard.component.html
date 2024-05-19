@@ -1,0 +1,29 @@
+<div class="d-flex align-items-center justify-content-between mt-3 mb-3">
+    <h2>Categories</h2>
+    <button class="create btn btn-success" [routerLink]="['/categories/create']">Create</button>
+</div>
+
+<hr>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col" id="categoryColumn">Category</th>
+            <th scope="col" id="editColumn">Edit</th>
+            <th scope="col" id="deleteColumn">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (category of allCategories; track $index) {
+        <tr>
+            <td>{{ category.title }}</td>
+
+            <td><button class="edit btn btn-warning" [routerLink]="['/categories/update', category.id]">Edit</button>
+            </td>
+
+            <td><button class="delete btn btn-danger" (click)="deleteCategory(category)">Delete</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

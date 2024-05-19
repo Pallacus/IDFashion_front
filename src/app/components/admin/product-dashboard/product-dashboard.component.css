@@ -1,0 +1,24 @@
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.create {
+    margin-left: 15%;
+    width: 100%;
+    max-width: 21.875rem;
+}
+
+#productColumn {
+    width: 80%;
+}
+
+#editColumn,
+#deleteColumn {
+    width: auto;
+}
+

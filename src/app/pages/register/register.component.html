@@ -1,0 +1,48 @@
+<div class="body">
+    <div class="container">
+        <div>
+            <div class="row">
+                <h1 class="mt-5">Sign up and join the fashion</h1>
+                <form class="miForm col-12 col-md-6 mt-5" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" placeholder="Please enter your name here."
+                            formControlName="name" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Last name</label>
+                        <input type="text" class="form-control" placeholder="Please enter your last name here."
+                            formControlName="last_name" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Address</label>
+                        <input placeholder="Please enter your address here." class="form-control"
+                            formControlName="address" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input placeholder="Please enter your email here." class="form-control"
+                            formControlName="email" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Card Number</label>
+                        <input placeholder="Please enter your card number here." class="form-control"
+                            formControlName="card_number" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" placeholder="Please enter your personal password here." class="form-control"
+                            formControlName="password" />
+                    </div>
+
+                    <input type="Submit" value="Send" class="btn" [disabled]="!formulario.valid">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

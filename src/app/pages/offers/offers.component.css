@@ -1,0 +1,104 @@
+h2 {
+    font-family: 'Roboto';
+    text-align: center;
+    margin-top: 40px;
+}
+p {
+  font-family: 'Roboto';
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+.buttons {
+    text-align: center;
+    margin-bottom: 20px;
+   
+   
+  }
+  
+  .categorybutton:hover {
+    background-color: #cbdf88;
+    margin-top: auto;
+    
+  }
+
+  
+  .card-product {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .card-product {
+    max-width: 100%;
+    height: auto;
+  }
+  .categorybutton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #939da8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    width: calc(25% - 10px);
+    border: none;
+}
+
+  .categorybutton:hover {
+    background-color: #0056b3;
+  }
+
+  
+@media screen and (max-width:900px) {
+    .cards-wrapper .card {
+        width: calc(33.333% - 10px);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .cards-wrapper .card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width:450px) {
+    .cards-wrapper .card {
+        width: 100%;
+    }
+}
+
+
+
+article {
+  height: 400px;
+  background-image: url('../../../assets/images/sweet-lady-striped-dress-with-gray-smartphone.jpg');
+  background-position: center, 500px;
+  background-size: cover;
+  position: relative;
+  background-color: var(--lightColor);
+  background-blend-mode: multiply;
+  font-size: 0.5rem;
+
+
+  & div {
+      font-family: 'Roboto';
+      font-style: italic;
+      color: var(--lightColor);
+      text-shadow: 4px 4px 8px var(--darkBlue);
+     
+    
+  }
+}

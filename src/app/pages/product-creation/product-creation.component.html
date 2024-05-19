@@ -1,0 +1,55 @@
+<div class="body">
+  <div class="container">
+    <div class="pt-4">
+      <div class="row">
+        <h1 class="mt-5">Creation of a new product</h1>
+        <form class="miForm col-12 col-md-6 mt-5" [formGroup]="formularioCreate">
+          <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" placeholder="Please enter product name" formControlName="title" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" placeholder="Please describe this product"
+              formControlName="description"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input type="number" min="0" step="any" class="form-control" formControlName="price"
+              placeholder="Please enter price here" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Image</label>
+            <input placeholder="Please enter the product's image here" class="form-control" formControlName="image" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Category</label>
+            <select type="number" min="0" step="1" class="form-control" formControlName="categories_id">
+              <option value="" selected>Select category</option>
+              @for (category of arrCategories; track category.id) {
+              <option value="{{ category.id }}">{{ category.title }}</option>
+              }
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Featured</label>
+            <select type="number" min="0" max="1" step="any" class="form-control" formControlName="featured">
+              <option value="0">Non featured</option>
+              <option value="1">Featured</option>
+            </select>
+          </div>
+          <div class="navigate">
+            <input type="Submit" value="Send" class="btn" [disabled]="!formularioCreate.valid" (click)="onSubmit()" />
+            <button class="btn ms-2" [routerLink]="['/dashboard/products']">Back</button>
+          </div>
+        </form>
+
+        <div class="col-md-5 d-none d-md-block justify-content-end miFoto"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+@if (product) {
+
+<div class="image-wrapper">
+  <div
+    [style]="{
+      backgroundImage: 'url(' + product.image + ')',
+      width: '100%',
+      height: '350px',
+      backgroundSize: 'cover'
+    }"
+  ></div>
+</div>
+<div class="card-body">
+  <h3 class="card-title">{{ product.title }}</h3>
+  <p class="priceP card-text">{{ product.price }} €</p>
+
+  <button
+    class="btn btn-primary btnStyle"
+    [routerLink]="['/products', product.id]"
+  >
+    View Details
+  </button>
+</div>
+
+}

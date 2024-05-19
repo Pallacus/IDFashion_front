@@ -1,0 +1,28 @@
+.order {
+    padding: 8px;
+}
+
+.field {
+    font-family: 'Roboto';
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(13, 27, 42, 0.2);
+    padding: 0 10px;
+    text-align: start;
+}
+
+.user {
+    width: 40vw;
+}
+
+.code,
+.date,
+.status {
+    width: 20vw;
+}
+
+.delete {
+    color: white;
+    padding: 0.1px 5px;
+    background-color: red;
+}

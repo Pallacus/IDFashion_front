@@ -1,0 +1,28 @@
+<div class="d-flex align-items-center justify-content-between mt-3 mb-3">
+    <h2>Products</h2>
+    <button class="create btn btn-success" [routerLink]="['/products/create/new']">Create</button>
+</div>
+
+<hr>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col" id="productColumn">Product</th>
+            <th scope="col" id="editColumn">Edit</th>
+            <th scope="col" id="deleteColumn">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (product of allProducts; track $index) {
+        <tr>
+            <td>{{ product.title }}</td>
+            <td><button class="edit btn btn-warning" [routerLink]="['/products/update', product.id]">Edit</button>
+            </td>
+            
+            <td><button class="delete btn btn-danger" (click)="deleteProduct(product)">Delete</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,43 @@
+h1 {
+  font-family: "Roboto";
+}
+
+.body {
+  background-image: url("https://img.sharemyimage.com/2024/04/22/updateCategory.jpeg");
+  background-size: cover;
+}
+
+.miForm {
+  font-family: "Roboto";
+  background-color: #e9eae7;
+  margin-bottom: 40px;
+  padding: 25px;
+  border-radius: 10px;
+
+  & div {
+    & label {
+      font-weight: bold;
+    }
+
+    & input {
+      background: white;
+      max-width: 700px;
+      border: none;
+      border-radius: 0.125rem;
+      font-weight: 300;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.btn {
+  color: rgba(224, 225, 221);
+  font-family: "Roboto";
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0);
+  background: #415a77;
+  margin-bottom: 15px;
+}

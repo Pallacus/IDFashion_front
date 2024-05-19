@@ -1,0 +1,97 @@
+.container {
+    font-family: 'Roboto';
+    color: #0D1B2A
+}
+
+
+
+.miFoto {
+    height: 450px;
+    max-width: 400px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.bl {
+    border-left: 1px solid rgba(224, 225, 221);
+}
+
+.mt-10 {
+    margin-top: 100px;
+}
+
+article {
+
+
+
+    & .description {
+        height: 170px;
+        overflow-y: scroll;
+    }
+
+    & span {
+        font-weight: bold;
+        margin-right: 15px;
+    }
+
+    & .btn {
+        color: rgba(224, 225, 221);
+        font-family: 'Roboto';
+        font-weight: bold;
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 0 rgba(13, 27, 42, 0.2);
+        background: linear-gradient(170deg,
+                    rgb(65, 90, 119) 0%,
+                    rgb(119, 141, 169) 100%);
+        display: block;
+        margin-bottom: 20px;
+
+    }
+
+    & .miBtn {
+        height: 35px;
+        border-radius: 50%;
+
+    }
+
+    & .subtitle {
+        font-style: italic;
+
+
+    }
+
+    .carousel-text {
+        height: 150px;
+        overflow-y: scroll;
+        border-bottom: 1px solid rgba(224, 225, 221);
+    }
+
+    textarea {
+        resize: vertical;
+        max-height: 100px;
+        border: none;
+        border-radius: 0.125rem;
+        font-weight: 300;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        overflow-y: scroll;
+        margin-bottom: 20px ;
+        margin-top: 20px;
+    }
+
+}
+
+
+.favoriteHeart {
+    color: #F97068;
+    font-weight: bolder;
+
+}
+
+.reviews div:first-child{
+    border-radius: 10px;
+    background-color: #E0E1DD;
+    padding: 5px;
+}

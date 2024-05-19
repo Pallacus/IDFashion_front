@@ -1,0 +1,40 @@
+.carousel-content {
+    position: relative;
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.carousel-item img {
+    position: relative;
+    filter: brightness(70%);
+    height: 70vh;
+    object-fit: cover;
+    top: 1px;
+}
+
+
+.button h4 {
+    display: inline-block;
+    position: relative;
+    border: 3.5px solid white;
+    padding: 10px;
+}
+
+.button h4:hover,
+.button h4:hover a {
+    border-color: #1B263B;
+    color: #1B263B;
+}
+
+.button h4 a {
+    color: white;
+    text-decoration: none;
+}

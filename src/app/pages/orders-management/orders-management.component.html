@@ -1,0 +1,32 @@
+<div class="container">
+    <hr>
+    <div class="orders">
+        <!-- @if (array.lenght === 0) 'mensaje' -->
+        @if (arrOrders.length === 0) {
+        <h2>No hay pedidos</h2>
+        }
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Order #:</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">User:</th>
+                    <!-- <th scope="col">Status:</th> -->
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (order of arrOrders; track order.id) {
+                <tr>
+                    <th scope="row">{{order.code}}</th>
+                    <td>{{order.created_at}}</td>
+                    <td>{{order.user_name}} {{order.user_last_name}}</td>
+                    <!-- <td>order.status</td> -->
+                    <button class="delete btn btn-danger" (click)="ngOnDelete(order.id)">Delete</button>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <hr>
+</div>

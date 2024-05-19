@@ -1,0 +1,51 @@
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-body h3,
+.card-body p,
+.card-body button {
+  margin: 0 auto;
+}
+
+.card-body p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+img {
+  max-height: 375px;
+  width: 90%;
+}
+
+.image-wrapper img {
+  width: 95%;
+  height: auto;
+  display: block;
+}
+
+.btnStyle {
+  background-color: #415a77;
+  border: none;
+
+  &:active {
+    background-color: #1b263b;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.9375rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a h3 {
+  color: var(--darkColor);
+}

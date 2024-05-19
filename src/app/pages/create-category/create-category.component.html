@@ -1,0 +1,30 @@
+<div class="body">
+    <div class="container">
+
+
+        <div class="pt-4">
+            <div class="row">
+                <h1 class="mt-5">Creation of a new category</h1>
+                <form class="miForm col-12 col-md-6 mt-5" [formGroup]="categoryCreate">
+                    <div class="mb-3">
+                        <label class="form-label">Title</label>
+                        <input type="text" class="form-control" placeholder="Please enter of category"
+                            formControlName="title" />
+                    </div>
+                    <div class="navigate">
+                        <input type="Submit" value="Create" class="btn" [disabled]="!categoryCreate.valid"
+                            (click)="onSubmit()">
+                        <button class="btn ms-2" [routerLink]="['/dashboard/categories']">Back</button>
+                    </div>
+                </form>
+
+                <div class="col-md-5 d-none d-md-block justify-content-end miFoto ">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
