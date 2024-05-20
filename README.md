@@ -65,13 +65,13 @@ E-Commerce:
 Clona el proyecto
 
 ```bash
-  git clone https://github.com/Sonia-Flores/front_e-Commerce.git
+  git clone https://github.com/Pallacus/IDFashion_front.git
 ```
 
 Accede al directorio del proyecto
 
 ```bash
-  cd front_e-Commerce
+  cd front
 ```
 
 Instala las dependencias
@@ -82,13 +82,13 @@ Instala las dependencias
 ```
 
 ```bash
-  git clone https://github.com/Sonia-Flores/back_e-Commerce.git
+  git clone https://github.com/Pallacus/IDFashion_back.git
 ```
 
 Accede al directorio del proyecto
 
 ```bash
-  cd back_e-Commerce
+  cd back
 ```
 
 Instala las dependencias
@@ -141,4 +141,4 @@ Inicia el servidor en el Back:
 - [@SoniaFlores](https://github.com/Sonia-Flores)
 - [@Carlos Tíscar](https://github.com/cativi)
 - [@Javier Jimenez](https://github.com/albegosu)
-- [@Albert Pallach](https://github.com/xabierjc94)
+- [@Albert Pallach](https://github.com/Pallacus)
